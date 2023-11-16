@@ -1,0 +1,59 @@
+﻿<Page x:Class="Messenger.AuthUser.SignIn"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Messenger.AuthUser"
+      mc:Ignorable="d" 
+      d:DesignHeight="400" d:DesignWidth="300"
+      Title="Вхід"
+      Background="White">
+
+    <Grid>
+        <Grid.Resources>
+            <Style TargetType="TextBlock">
+                <Setter Property="FontSize"
+                    Value="20"></Setter>
+                <Setter Property="Margin"
+                    Value="10 0"></Setter>
+            </Style>
+            <Style TargetType="TextBox">
+                <Setter Property="FontSize"
+                    Value="20"></Setter>
+                <Setter Property="Margin"
+                    Value="10 10"></Setter>
+            </Style>
+        </Grid.Resources>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="203*"/>
+            <RowDefinition Height="197*"/>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.RowSpan="2">
+            <Label Content="Вхід"
+                HorizontalContentAlignment="Center"
+                FontSize="20"></Label>
+            <TextBlock Text="Логін:"></TextBlock>
+            <TextBox x:Name="loginTextBox"></TextBox>
+            <TextBlock Text="Пароль:"></TextBlock>
+            <TextBox x:Name="passwordTextBox"></TextBox>
+            <Button x:Name="signIn"
+                Content="Увійти"
+                HorizontalAlignment="Stretch"
+                Margin="30 10" Height="47"
+                FontSize="20"
+                Click="signIn_Click"></Button>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Margin="10"
+            Width="150"
+            Text="У вас немає акаунту"
+                FontSize="15"></TextBlock>
+                <Button x:Name="signUpPage"
+            Content="Реєстрування"
+            Width="100" Height="26"
+            Click="signUpPage_Click" RenderTransformOrigin="1.389,0.528"/>
+            </StackPanel>
+        </StackPanel>
+
+    </Grid>
+
+</Page>

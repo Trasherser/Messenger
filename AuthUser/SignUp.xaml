@@ -1,0 +1,54 @@
+﻿<Page x:Class="Messenger.AuthUser.SignUp"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Messenger.AuthUser"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="300"
+      Title="SignUp">
+
+    <Grid Background="White">
+        <Grid.Resources>
+            <Style TargetType="TextBlock">
+                <Setter Property="FontSize"
+            Value="20"></Setter>
+                <Setter Property="Margin"
+            Value="10 0"></Setter>
+            </Style>
+            <Style TargetType="TextBox">
+                <Setter Property="FontSize"
+            Value="20"></Setter>
+                <Setter Property="Margin"
+            Value="10 10"></Setter>
+            </Style>
+        </Grid.Resources>
+        <StackPanel>
+            <Label Content="Реєстрування"
+        HorizontalContentAlignment="Center"
+        FontSize="20"></Label>
+            <TextBlock Text="Логін:"></TextBlock>
+            <TextBox x:Name="loginTextBox" Text="{Binding Login, Mode=TwoWay}"></TextBox>
+            <TextBlock Text="Пароль:"></TextBlock>
+            <TextBox x:Name="passwordTextBox" Text="{Binding Password, Mode=TwoWay}"></TextBox>
+            <TextBlock Text="Пошта:"></TextBlock>
+            <TextBox x:Name="emailTextBox" Text="{Binding Email, Mode=TwoWay}"></TextBox>
+            <Button x:Name="signUp"
+        Content="Зареєструватися"
+        HorizontalAlignment="Stretch"
+        Margin="30 10" Height="47"
+        FontSize="20"
+        Click="signUp_Click"></Button>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Margin="10"
+                Width="103"
+                Text="У вас є акаунт:"
+        FontSize="15"></TextBlock>
+                <Button x:Name="signInPage"
+    Content="Увійти"
+    Width="100" Height="26"
+    Click="signInPage_Click" RenderTransformOrigin="1.389,0.528"/>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Page>
